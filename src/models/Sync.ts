@@ -2,7 +2,7 @@ import axios, { AxiosPromise } from 'axios';
 
 // Add Generic constraint so that we can do ES6 destructuring and get the id property below
 interface HasId {
-  id: number;
+  id?: number;
 }
 export class Sync<T extends HasId> {
   constructor(public rootUrl: string) {}
