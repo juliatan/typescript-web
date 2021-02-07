@@ -11,4 +11,8 @@ export class Attributes<T> {
     // Object.assign means override and replace this.data
     Object.assign(this.data, update);
   }
+
+  getAll(): T {
+    return this.data;
+  }
 }
