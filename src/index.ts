@@ -7,3 +7,8 @@ user.events.on('change', () => {
 });
 
 user.events.trigger('change');
+
+// getting a reference to the on method on the Eventing class
+user.on('change', () => {
+  console.log('user changed');
+});

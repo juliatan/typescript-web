@@ -19,4 +19,19 @@ export class User {
   constructor(attrs: UserProps) {
     this.attributes = new Attributes<UserProps>(attrs);
   }
+
+  // since we've abstracted out Eventing class, to make things easier, we create a passthrough method that calls a
+  // reference to the on method of Eventing.
+  // These are getter methods.
+  get on() {
+    return this.events.on;
+  }
+
+  get trigger() {
+    return this.events.trigger;
+  }
+
+  get get() {
+    return this.attributes.get;
+  }
 }
